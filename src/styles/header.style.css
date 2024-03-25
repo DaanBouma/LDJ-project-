@@ -1,0 +1,28 @@
+header {
+    background-color: #01C57B;
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*  section  */
+
+#left-section {
+    width: 33vw;
+    height: 75px;
+}
+#middle-section {
+    width: 33vw;
+    height: 75px;
+}
+#right-section {
+    width: 33vw;
+    height: 75px;
+}
