@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Write some starter css code */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Kanit", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -8,4 +10,35 @@ body {
 
 html{
     box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FBFBFB;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff00;
+    color: #240261;
+    cursor: pointer;
+    font-weight: 550;
+    transition: 0.4s;
+    border-radius: 10px;
+    
+}
+
+button:hover{
+  background-color: #36BA66;
+  color: white;
+  border-radius: 25px;
+}
+
+
+h1{
+  color: #240261;
 }

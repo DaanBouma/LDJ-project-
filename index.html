@@ -6,10 +6,34 @@
     <title>LDJ-care</title>
     <link rel="icon" type="image/x-icon" href="/src/content/logo.png" />
 
-    <link rel="stylesheet" href="/src/styles/main.css"/>
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <include src="/src/components/header.html"></include>
+    <!-- Header -->
+    <include html="src/components/header.html"></include>
+
+    <!-- Home -->
+    <section id="extra-header">
+      <div>
+        <h1>Wie is LDJ-care?</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptates, quidem, quod, quos quas quae quibusdam voluptatum
+          exercitationem doloribus quia quae quibusdam voluptatum exercitationem
+          doloribus quia
+        </p>
+      </div>
+      <div id="image">
+        <img
+          src="https://png.pngtree.com/png-clipart/20221020/original/pngtree-diversity-of-people-background-flat-design-png-image_8708592.png"          alt=""
+          srcset=""
+          width="256px"
+
+        />
+      </div>
+    </section>
+    <main></main>
+    <!-- End Home -->
 
     <script src="/src/js/include.js"></script>
     <!-- Router -->
@@ -17,5 +41,35 @@
       src="https://unpkg.com/@aaronshaf/html-router@1/hash.js"
       type="module"
     ></script>
+    <script src="src/js/scroll.js"></script>
   </body>
+
+  <style>
+    /* The sticky class is added to the header with JS when it reaches its scroll position */
+    .sticky {
+      position: sticky;
+      top: 0;
+    }
+
+    /* Main header */
+    #extra-header {
+      background-color: #dcffe6;
+      padding: 1.25em 15%;
+      display: flex;  
+      justify-content: center;
+    }
+
+    #extra-header h1 {
+      font-size: 2em;
+    }
+
+    #extra-header p {
+      font-size: 1.15em;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </html>

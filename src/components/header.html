@@ -1,36 +1,51 @@
-<template>
-    <header>
-        <div></div>
-    </header>
-</template>
+<header id="headerBar">
+  <div class="header-items">
+    <div id="logo">
+      <img
+        src="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/00236_Design_Free_health_Logo_Template_online-03.png"
+        alt=""
+        srcset=""
+        width="32px"
+        height="32px"
+      />
+    </div>
+
+    <!-- Buttons here -->
+    <div id="links">
+      <a href="google.com"><Button>Home</Button></a>
+      <a href="google.com"><Button>Statistics</Button></a>
+      <a href="google.com"><Button>Problems</Button></a>
+      <a href="google.com"><Button>Our solutions</Button></a>
+    </div>
+  </div>
+</header>
 
 <style>
-header {
-    background-color: #01C57B;
-    width: 100vw;
-    height: 75px;
-    display: flex;
+  header {
+    background-color: #dcffe6;
+    /* Niet nodig, je hebt padding hiervoor */
+    padding: 1.25em 15%;
+    display: flex;  
     justify-content: center;
+  }
+
+  .header-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-}
+  }
 
-body {
-    margin: 0;
-    padding: 0;
-}
+  #links {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
 
-/*  section  */
-
-#left-section {
-    width: 33vw;
-    height: 75px;
-}
-#middle-section {
-    width: 33vw;
-    height: 75px;
-}
-#right-section {
-    width: 33vw;
-    height: 75px;
-}
+  @media screen and (max-width: 882px) {
+    #links {
+      display: none;
+    }
+    
+  }
 </style>
