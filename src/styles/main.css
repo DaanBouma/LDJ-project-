@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --title-color: #240261;
+    --button-text-color: #240261;
+    --button-text-color-hover: white;
+    --button-bg-color: #36BA66;
+
+    --header-color: #240261;
+
+    --important-section-bg-color: rgb(227, 227, 227);
+}
+
 /* Write some starter css code */
 body {
   font-family: "Kanit", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
   overflow-x: hidden;
 }
 
@@ -18,14 +28,13 @@ main{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #FBFBFB;
 }
 
 button{
     padding: 10px 20px;
     border: none;
     background-color: #ffffff00;
-    color: #240261;
+    color: var(--button-text-color);
     cursor: pointer;
     font-weight: 550;
     transition: 0.4s;
@@ -33,13 +42,16 @@ button{
     
 }
 
-button:hover{
+button:hover, button.active{
   background-color: #36BA66;
-  color: white;
+  color: var(--button-text-color-hover);
   border-radius: 25px;
 }
 
+.important-section{
+    background-color: rgb(227, 227, 227)
+}
 
 h1{
-  color: #240261;
+  color: var(--title-color);
 }

@@ -1,11 +1,10 @@
-#menu {
-    margin-top: 50px;
+#button-carousel {
     width: 100vw;
-    height: 10px;
-    background-color: #E2FFE8;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.5em;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -13,6 +12,8 @@
 .item {
     width: 180px;
     height: 180px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.128);
+    border-radius: 25px;
     transform: translateY(-200px);
     transition: 1s;
     opacity: 0;

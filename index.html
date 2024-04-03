@@ -7,11 +7,13 @@
     <link rel="icon" type="image/x-icon" href="/src/content/logo.png" />
 
     <link rel="stylesheet" href="/src/styles/main.css" />
-    <link rel="stylesheet" href="src/styles/buttons.css">
+    <link rel="stylesheet" href="src/styles/buttons.css" />
   </head>
   <body>
     <!-- Header -->
     <include html="src/components/header.html"></include>
+
+    <!-- Including in include doesn't work so make a div for every page -->
 
     <!-- Home -->
     <section id="extra-header">
@@ -35,15 +37,21 @@
     </section>
 
     <include html="src/components/buttonslide.html"></include>
-
     <include html="src/components/problemen.html"></include>
     <main></main>
     <!-- End Home -->
 
+    <!-- Statistics -->
+
+    <!-- End statistics -->
+
     <script src="/src/js/include.js"></script>
     <!-- Router -->
-    <script src="https://unpkg.com/@aaronshaf/html-router@1/hash.js" type="module" ></script>
-    <script src="src/js/scroll.js"></script>
+    <script
+      src="https://unpkg.com/@aaronshaf/html-router@1/hash.js"
+      type="module"
+    ></script>
+
     <script src="src/js/initializer.js"></script>
   </body>
 

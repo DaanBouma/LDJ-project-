@@ -1,26 +1,45 @@
-console.log("initializer loaded...")
+console.log("initializer loaded...");
 
-function init(){
-    showmenu(10);
-    showitems(10);
-}
-function showitems(timeout) 
+// Wait for load
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.getElementById("home").classList.add("active");
+  showMenu();
+  showItems();
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () {
+    checkScroll();
+  };
+
+  // Get the header
+  const header = document.getElementById("headerBar");
+
+  // Get the offset position of the navbar
+  let sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function checkScroll() {
+    if (window.scrollY > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+});
+
+
+function showItems()
 {
-    setTimeout(() => {
-        const items = document.querySelectorAll(".item");
-        items.forEach(item => {
-            item.style.transform = "translateY(0px)";
-            item.style.opacity = "1"
-        });
-    }, timeout);
+    const items = document.querySelectorAll(".item");
+    items.forEach(item => {
+        item.style.transform = "translateY(0px)";
+        item.style.opacity = "1"
+    });
 }
 
-function showmenu(timeout)
+function showMenu()
 {
-    setTimeout(() => {
-        const menu = document.getElementById("menu");
-        menu.style.height = "200px";
-    }, timeout);
+    const menu = document.getElementById("button-carousel");
+    menu.style.height = "200px";
 }
-
-init();
