@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/src/content/logo.png" />
 
     <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/buttons.css">
   </head>
   <body>
     <!-- Header -->
@@ -15,7 +16,7 @@
     <!-- Home -->
     <section id="extra-header">
       <div>
-        <h1>Wie is LDJ-care?</h1>
+        <h1>Wat is LDJ-care?</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptates, quidem, quod, quos quas quae quibusdam voluptatum
@@ -25,23 +26,25 @@
       </div>
       <div id="image">
         <img
-          src="https://png.pngtree.com/png-clipart/20221020/original/pngtree-diversity-of-people-background-flat-design-png-image_8708592.png"          alt=""
+          src="https://png.pngtree.com/png-clipart/20221020/original/pngtree-diversity-of-people-background-flat-design-png-image_8708592.png"
+          alt=""
           srcset=""
           width="256px"
-
         />
       </div>
     </section>
+
+    <include html="src/components/buttonslide.html"></include>
+
+    <include html="src/components/problemen.html"></include>
     <main></main>
     <!-- End Home -->
 
     <script src="/src/js/include.js"></script>
     <!-- Router -->
-    <script
-      src="https://unpkg.com/@aaronshaf/html-router@1/hash.js"
-      type="module"
-    ></script>
+    <script src="https://unpkg.com/@aaronshaf/html-router@1/hash.js" type="module" ></script>
     <script src="src/js/scroll.js"></script>
+    <script src="src/js/initializer.js"></script>
   </body>
 
   <style>
@@ -49,14 +52,16 @@
     .sticky {
       position: sticky;
       top: 0;
+      z-index: 100000;
     }
 
     /* Main header */
     #extra-header {
       background-color: #dcffe6;
       padding: 1.25em 15%;
-      display: flex;  
+      display: flex;
       justify-content: center;
+      z-index: 1000;
     }
 
     #extra-header h1 {

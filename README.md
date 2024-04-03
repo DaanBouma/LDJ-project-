@@ -1,2 +1,0 @@
-# LDJ-project-
-project opdracht
