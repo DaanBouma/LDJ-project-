@@ -41,5 +41,4 @@ function showItems()
 function showMenu()
 {
     const menu = document.getElementById("button-carousel");
-    menu.style.height = "200px";
 }

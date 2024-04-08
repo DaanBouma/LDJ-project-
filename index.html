@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="/src/styles/main.css" />
     <link rel="stylesheet" href="src/styles/buttons.css" />
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2/webcomponents-loader.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -16,33 +18,38 @@
     <!-- Including in include doesn't work so make a div for every page -->
 
     <!-- Home -->
-    <section id="extra-header">
-      <div>
-        <h1>Wat is LDJ-care?</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptates, quidem, quod, quos quas quae quibusdam voluptatum
-          exercitationem doloribus quia quae quibusdam voluptatum exercitationem
-          doloribus quia
-        </p>
-      </div>
-      <div id="image">
-        <img
-          src="https://png.pngtree.com/png-clipart/20221020/original/pngtree-diversity-of-people-background-flat-design-png-image_8708592.png"
-          alt=""
-          srcset=""
-          width="256px"
-        />
-      </div>
-    </section>
+    <hash-route path="/">
+      <section id="extra-header">
+        <div>
+          <h1>Wat is LDJ-care?</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, quidem, quod, quos quas quae quibusdam voluptatum
+            exercitationem doloribus quia quae quibusdam voluptatum
+            exercitationem doloribus quia
+          </p>
+        </div>
+        <div id="image">
+          <img
+            src="https://png.pngtree.com/png-clipart/20221020/original/pngtree-diversity-of-people-background-flat-design-png-image_8708592.png"
+            alt=""
+            srcset=""
+            width="256px"
+          />
+        </div>
+      </section>
 
-    <include html="src/components/buttonslide.html"></include>
-    <include html="src/components/problemen.html"></include>
-    <main></main>
+      <include html="src/components/buttonslide.html"></include>
+      <include html="src/components/problemen.html"></include>
+    </hash-route>
     <!-- End Home -->
 
     <!-- Statistics -->
-
+    <hash-route path="/stats">
+      <template>
+        <h1>hello world</h1>
+      </template>
+    </hash-route>
     <!-- End statistics -->
 
     <script src="/src/js/include.js"></script>
@@ -51,7 +58,6 @@
       src="https://unpkg.com/@aaronshaf/html-router@1/hash.js"
       type="module"
     ></script>
-
     <script src="src/js/initializer.js"></script>
   </body>
 
