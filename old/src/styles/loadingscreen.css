@@ -1,0 +1,31 @@
+#loadingscreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dcffe6;
+    position: absolute;
+    z-index: 9999999999999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+body {
+    overflow: hidden !important;
+    overflow: visible;
+}
+
+@keyframes rotate {
+    0%   {rotate: 0deg;}
+    100% {rotate: 700deg}
+  }
+  
+
+  #loading {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 150px;
+    -webkit-user-drag: none;
+  }

@@ -8,10 +8,19 @@
 
     <link rel="stylesheet" href="/src/styles/main.css" />
     <link rel="stylesheet" href="src/styles/buttons.css" />
+    <link rel="stylesheet" href="src/styles/loadingscreen.css">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2/webcomponents-loader.js"></script>
   </head>
   <body>
+
+    <main id="loadingscreen">
+        <img id="loading" src="/src/img/loading.png" alt="">
+    </main>
+
+
+
+
     <!-- Header -->
     <include html="src/components/header.html"></include>
 
@@ -53,12 +62,13 @@
     <!-- End statistics -->
 
     <script src="/src/js/include.js"></script>
+    <script src="src/js/initializer.js"></script>   
     <!-- Router -->
     <script
       src="https://unpkg.com/@aaronshaf/html-router@1/hash.js"
       type="module"
     ></script>
-    <script src="src/js/initializer.js"></script>
+
   </body>
 
   <style>

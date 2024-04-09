@@ -1,15 +1,16 @@
 console.log("initializer loaded...");
-
+let yes = "no";
 // Wait for load
 document.addEventListener("DOMContentLoaded", () => {
-
+// 
   document.getElementById("home").classList.add("active");
-  showMenu();
   showItems();
 
   // When the user scrolls the page, execute myFunction
   window.onscroll = function () {
-    checkScroll();
+    if (yes == "yes"){
+      checkScroll();
+    }
   };
 
   // Get the header
@@ -38,7 +39,14 @@ function showItems()
     });
 }
 
-function showMenu()
-{
-    const menu = document.getElementById("button-carousel");
-}
+const loadingscreen = document.getElementById("loadingscreen");
+setTimeout(function () {
+    loadingscreen.style.transform = "translateY(-100vh)";
+    loadingscreen.style.transition = "1s";
+    setTimeout(function () {
+        loadingscreen.style.display = "none";
+        document.body.style.overflow = "visible";
+        yes = "no";
+    }, 1500);
+}, 1000);
+showItems();

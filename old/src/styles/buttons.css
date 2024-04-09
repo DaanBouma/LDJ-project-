@@ -5,8 +5,13 @@
     align-items: center;
     justify-content: center;
     gap: 1.5em;
-    overflow: hidden;
+    overflow: visible;
     transition: 0.5s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .item {
@@ -14,11 +19,15 @@
     height: 180px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.128);
     border-radius: 25px;
-    transform: translateY(-200px);
     transition: 1s;
     opacity: 0;
-}
+    transform: translateY(-300px);
 
+}
+.item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 .item_top {
     width: 180px;
     height: 150px;
