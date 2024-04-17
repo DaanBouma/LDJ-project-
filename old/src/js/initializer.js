@@ -30,14 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function showItems()
-{
-    const items = document.querySelectorAll(".item");
-    items.forEach(item => {
-        item.style.transform = "translateY(0px)";
-        item.style.opacity = "1"
-    });
-}
+
 
 const loadingscreen = document.getElementById("loadingscreen");
 setTimeout(function () {
@@ -46,7 +39,8 @@ setTimeout(function () {
     setTimeout(function () {
         loadingscreen.style.display = "none";
         document.body.style.overflow = "visible";
-        yes = "no";
+        yes = "yes";
+
     }, 1500);
 }, 1000);
-showItems();
+showItems()

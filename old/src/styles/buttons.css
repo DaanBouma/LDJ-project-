@@ -21,7 +21,6 @@
     border-radius: 25px;
     transition: 1s;
     opacity: 0;
-    transform: translateY(-300px);
 
 }
 .item:hover {
